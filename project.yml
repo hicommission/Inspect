@@ -1,0 +1,41 @@
+name: Inspect
+options:
+  deploymentTarget:
+    macOS: "13.0"
+  bundleIdPrefix: com.hicommission
+settings:
+  base:
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    CODE_SIGN_IDENTITY: "-"
+    SWIFT_VERSION: "5.10"
+    ENABLE_HARDENED_RUNTIME: YES
+    INFOPLIST_KEY_LSUIElement: YES
+    INFOPLIST_KEY_NSHumanReadableCopyright: "© 2026 Gilbert Alipui"
+    INFOPLIST_KEY_NSPrincipalClass: NSApplication
+targets:
+  Inspect:
+    type: application
+    platform: macOS
+    sources:
+      - path: Inspect
+    info:
+      path: Inspect/Info.plist
+      properties:
+        LSUIElement: true
+        NSHighResolutionCapable: true
+        NSPrincipalClass: NSApplication
+        CFBundleIconName: AppIcon
+        CFBundleURLTypes:
+          - CFBundleURLName: com.hicommission.Inspect.url
+            CFBundleURLSchemes:
+              - inspect
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.hicommission.Inspect
+        PRODUCT_NAME: Inspect
+        GENERATE_INFOPLIST_FILE: NO
+        SKIP_INSTALL: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
